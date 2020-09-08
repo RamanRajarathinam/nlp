@@ -390,7 +390,7 @@ class IndexableMixin:
                 By defaul it corresponds to `column`.
             device (Optional `int`): If not None, this is the index of the GPU to use. By default it uses the CPU.
             string_factory (Optional `str`): This is passed to the index factory of Faiss to create the index. Default index class is IndexFlatIP.
-            metric_type (Optional `int`): Type of metric. Ex: faiss.METRIC_INNER_PRODUCT or faiss.METRIC_L2.
+            metric_type (Optional `int`): Type of metric. Ex: either `0`(faiss.METRIC_INNER_PRODUCT) or `1`(faiss.METRIC_L2).
             custom_index (Optional `faiss.Index`): Custom Faiss index that you already have instantiated and configured for your needs.
             train_size (Optional `int`): If the index needs a training step, specifies how many vectors will be used to train the index.
             faiss_verbose (`bool`, defaults to False): Enable the verbosity of the Faiss index.
@@ -424,7 +424,7 @@ class IndexableMixin:
             index_name (`str`): The index_name/identifier of the index. This is the index_name that is used to call `.get_nearest` or `.search`.
             device (Optional `int`): If not None, this is the index of the GPU to use. By default it uses the CPU.
             string_factory (Optional `str`): This is passed to the index factory of Faiss to create the index. Default index class is IndexFlatIP.
-            metric_type (Optional `int`): Type of metric. Ex: faiss.METRIC_INNER_PRODUCT or faiss.METRIC_L2.
+            metric_type (Optional `int`): Type of metric. Ex: either `0`(faiss.METRIC_INNER_PRODUCT) or `1`(faiss.METRIC_L2).
             custom_index (Optional `faiss.Index`): Custom Faiss index that you already have instantiated and configured for your needs.
             train_size (Optional `int`): If the index needs a training step, specifies how many vectors will be used to train the index.
             faiss_verbose (`bool`, defaults to False): Enable the verbosity of the Faiss index.
